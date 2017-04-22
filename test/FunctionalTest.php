@@ -17,9 +17,7 @@ class FunctionalTest extends WebTestCase
         $client->request('GET', '/');
 
         $this->assertTrue($client->getResponse()->isOk());
-        $this->assertEquals(
-            'INDEX',
-            $client->getResponse()->getContent()
+        $this->assertEquals('INDEX', $client->getResponse()->getContent()
         );
     }
 
