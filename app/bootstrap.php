@@ -17,27 +17,24 @@ $app->register(new MonologServiceProvider(), array(
 ));
 
 
-//de este modo tenemos en una misma orden, la llamada a la ruta y la funcionalidad de la misma
-$app->get('/test', function() use($app){
-    $app['monolog']->addInfo('Basic use of routing and logging');
-    return 'INDEX';
-}) ;
-
-
-//De este otro, separamos el routing de la funcionalidad propia
-$app->get('/', 'AppBundle\Controller\AppControl::index');
-/*$app
-    ->match('/', 'AppBundle\Controller\AppControl::index')
-    ->method('GET|POST');
-
-return $app;
-*/
-
-
+//On this way we have in the same order the call and the functionality
 $app->get('/hello/{name}', function ($name) use ($app) {
     return 'Hello '.$app->escape($name);
 });
 
+//This other separates call and functionality in an extern controller
+$app->get('/', 'AppBundle\Controller\AppControl::indexAction');
+//above is similar
+/*$app
+    ->match('/', 'AppBundle\Controller\AppControl::index')
+    ->method('GET|POST');
+*/
 
+$app->get('/add/{sum1}/{sum2}', 'AppBundle\Controller\AppControl::addAction');
+
+$app->get('/sub/{sum1}/{sum2}', 'AppBundle\Controller\AppControl::subAction');
+
+
+//Return $app
 $app['debug'] = true;
 return $app;
