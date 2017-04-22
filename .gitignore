@@ -1,0 +1,8 @@
+#.gitignore for Silex app
+
+/.idea
+/phpunit.xml
+/vendor
+/build
+/composer.lock
+/logs
