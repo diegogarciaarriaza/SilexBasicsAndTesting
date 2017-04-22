@@ -108,7 +108,7 @@ The purpose of this guide is to show how to use Silex in a basic way and unit an
         }
         ```
   
-##How to test this project
+## How to test this project
 
 The installation of this project is very easy. Simple clone the repository with 
 ```
