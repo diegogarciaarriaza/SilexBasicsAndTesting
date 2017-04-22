@@ -3,7 +3,7 @@
 The purpose of this guide is to show how to use Silex in a basic way and unit and functional test.
 
 ## Theory about Silex and Tests
-* ###Installation of Silex
+* **Installation of Silex**
 
     Install Silex is pretty simple, we can do it using **composer**:
     For it, we will execute the **composer.json** file and we will have all for the right working of silex, unit test, functional test, logs and routing with controller. 
@@ -15,7 +15,7 @@ The purpose of this guide is to show how to use Silex in a basic way and unit an
     }
     ```
     
-* ###First Usage
+* **First Usage**
 
     After that you only need a file like this **index.html**
     ```
@@ -31,7 +31,7 @@ The purpose of this guide is to show how to use Silex in a basic way and unit an
     $app->run();
     ```
     
-* ###Good practices
+* **Good practices**
 
     It is a really good practice to separate the call to autoload and the routing functionalities, for this we will use a simple index with the call to autoload and other file **bootstrap.php** with the real work of the application.
     
@@ -56,7 +56,7 @@ The purpose of this guide is to show how to use Silex in a basic way and unit an
         
     We will use the second and third way following the symfony philosophy :)
     
-* ###Controllers
+* **Controllers**
 
     As good programmers... we will have separated the controller of the rest of the application. In our case, we will have a simple function for add two numbers and return the result with a html response
     ```
@@ -78,7 +78,7 @@ The purpose of this guide is to show how to use Silex in a basic way and unit an
     }
     ```
     
-* ###Tests
+* **Tests**
     
     We can to do two types of test, UnitTest and FunctionalTest. For use it, we have to configure **phpunit.xml.dist** where we will configure the directory where tests are found.
     
