@@ -17,7 +17,7 @@ class AppControl
     public function addAction(Application $app, Request $request){
         $app['monolog']->addInfo('Add Action from controller');
 
-        //return (new Functions())->add($request->get('sum1'), $request->get('sum2'));
+        //return new Response((new Functions())->add($request->get('sum1'), $request->get('sum2')), 200);
         //more detailed...
         $sum1 = $request->get('sum1');
         $sum2 = $request->get('sum2');
@@ -30,7 +30,7 @@ class AppControl
     public function subAction(Application $app, Request $request){
         $app['monolog']->addInfo('Add Action from controller');
 
-        //return (new Functions())->sub($request->get('sum1'), $request->get('sum2'));
+        //return new Response((new Functions())->sub($request->get('sum1'), $request->get('sum2')), 200);
         //more detailed...
         $sum1 = $request->get('sum1');
         $sum2 = $request->get('sum2');

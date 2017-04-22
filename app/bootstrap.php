@@ -26,7 +26,7 @@ $app->get('/hello/{name}', function ($name) use ($app) {
 $app->get('/', 'AppBundle\Controller\AppControl::indexAction');
 //above is similar
 /*$app
-    ->match('/', 'AppBundle\Controller\AppControl::index')
+    ->match('/', 'AppBundle\Controller\AppControl::indexAction')
     ->method('GET|POST');
 */
 
@@ -34,7 +34,5 @@ $app->get('/add/{sum1}/{sum2}', 'AppBundle\Controller\AppControl::addAction');
 
 $app->get('/sub/{sum1}/{sum2}', 'AppBundle\Controller\AppControl::subAction');
 
-
 //Return $app
-$app['debug'] = true;
 return $app;
